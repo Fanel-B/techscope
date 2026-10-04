@@ -1,0 +1,9 @@
+﻿service_id,nom,nb_serveurs,nb_prod,point_unique_defaillance
+S01,ETL Core,2,2,False
+S02,Datalake,2,1,False
+S03,Reporting BI,2,1,False
+S04,API Gateway,2,1,False
+S05,Data Catalog,1,1,True
+S06,Scheduler,2,0,False
+S07,Data Quality,2,0,False
+S08,Archivage,1,1,True

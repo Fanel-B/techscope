@@ -1,0 +1,15 @@
+﻿server_id,environnement,etat,service_id,derniere_maj
+SRV001,prod,actif,S01,2026-09-27
+SRV002,prod,actif,S01,2026-10-01
+SRV003,dev,actif,S02,2026-10-04
+SRV004,prod,actif,S02,2026-09-27
+SRV005,prod,maintenance,S03,2026-09-27
+SRV006,dev,actif,S03,2026-10-04
+SRV007,dev,actif,S04,2026-09-26
+SRV008,prod,actif,S04,2026-09-24
+SRV009,prod,actif,S05,2026-07-21
+SRV010,preprod,actif,S06,2026-07-21
+SRV011,preprod,actif,S06,2026-09-20
+SRV012,dev,actif,S07,2026-09-17
+SRV013,preprod,actif,S07,2026-09-16
+SRV014,prod,actif,S08,2026-10-03

@@ -1,0 +1,9 @@
+﻿service_id,nom
+S01,ETL Core
+S02,Datalake
+S03,Reporting BI
+S04,API Gateway
+S05,Data Catalog
+S06,Scheduler
+S07,Data Quality
+S08,Archivage

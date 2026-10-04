@@ -1,0 +1,16 @@
+﻿produit,metier_id,capacite,affectees,actifs,taux_affectation,taux_utilisation,licences_inutilisees,faible_usage
+Outil ETL,M1,30,25,20,0.83,0.8,5,False
+Outil ETL,M2,80,67,36,0.84,0.54,31,False
+Outil ETL,M4,100,94,28,0.94,0.3,66,False
+Outil ETL,M5,20,17,2,0.85,0.12,15,True
+Outil ETL,M6,50,45,23,0.9,0.51,22,False
+Suite BI,M1,50,38,22,0.76,0.58,16,False
+Suite BI,M3,100,96,83,0.96,0.86,13,False
+Suite BI,M4,50,46,28,0.92,0.61,18,False
+Suite BI,M5,30,19,15,0.63,0.79,4,False
+Catalogue de données,M1,20,16,9,0.8,0.56,7,False
+Catalogue de données,M2,20,19,16,0.95,0.84,3,False
+Catalogue de données,M3,50,34,15,0.68,0.44,19,False
+Catalogue de données,M4,100,97,34,0.97,0.35,63,False
+Catalogue de données,M5,80,74,69,0.92,0.93,5,False
+Catalogue de données,M6,100,90,34,0.9,0.38,56,False

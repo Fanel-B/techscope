@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>TechScope - rapport</title>
+<style>body{font-family:Arial,sans-serif;max-width:900px;margin:30px auto;color:#222}
+h1,h2{color:#1f3864}table{border-collapse:collapse;margin-bottom:20px}
+td,th{border:1px solid #ccc;padding:4px 10px;font-size:14px}th{background:#eef2f8}</style>
+</head><body>
+<h1>TechScope - rapport d'exécution</h1>
+<p>Données fictives générées pour la démonstration.</p>
+<h2>Qualité des données</h2>
+<p>113 lignes lues, 12 anomalies détectées
+(10 lignes écartées des indicateurs).</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>source</th>
+      <th>ligne</th>
+      <th>regle</th>
+      <th>detail</th>
+      <th>gravite</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>inventaire.json</td>
+      <td>inventaire ligne 14</td>
+      <td>champ obligatoire</td>
+      <td>server_id manquant</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>inventaire.json</td>
+      <td>SRV005</td>
+      <td>unicité</td>
+      <td>server_id en doublon</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>inventaire.json</td>
+      <td>SRV900</td>
+      <td>intégrité référentielle</td>
+      <td>service_id 'S99' absent de référentiel services</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>inventaire.json</td>
+      <td>SRV009</td>
+      <td>fraîcheur</td>
+      <td>dernière mise à jour il y a 75 jours (&gt; 30)</td>
+      <td>avertissement</td>
+    </tr>
+    <tr>
+      <td>inventaire.json</td>
+      <td>SRV010</td>
+      <td>fraîcheur</td>
+      <td>dernière mise à jour il y a 75 jours (&gt; 30)</td>
+      <td>avertissement</td>
+    </tr>
+    <tr>
+      <td>referentiel.db (usages)</td>
+      <td>S99/M2</td>
+      <td>intégrité référentielle</td>
+      <td>service_id 'S99' absent de référentiel services</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>referentiel.db (usages)</td>
+      <td>S01/M4</td>
+      <td>valeur invalide</td>
+      <td>volume_activite négatif</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>licences.csv</td>
+      <td>Suite BI/M2</td>
+      <td>valeur invalide</td>
+      <td>capacite négatif</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>licences.csv</td>
+      <td>Outil ETL/M3</td>
+      <td>cohérence</td>
+      <td>affectees &gt; capacite</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>licences.csv</td>
+      <td>Suite BI/M6</td>
+      <td>cohérence</td>
+      <td>actifs &gt; affectees</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>historique.csv</td>
+      <td>S02/2026-08</td>
+      <td>champ obligatoire</td>
+      <td>utilisateurs_actifs manquant</td>
+      <td>erreur</td>
+    </tr>
+    <tr>
+      <td>historique.csv</td>
+      <td>S98/2026-09</td>
+      <td>intégrité référentielle</td>
+      <td>service_id 'S98' absent de référentiel services</td>
+      <td>erreur</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Constats métier (ce ne sont pas des erreurs de données)</h2>
+<h3>Licences à faible usage (&lt; 30 % des licences affectées utilisées)</h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>produit</th>
+      <th>metier_id</th>
+      <th>affectees</th>
+      <th>actifs</th>
+      <th>taux_utilisation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Outil ETL</td>
+      <td>M5</td>
+      <td>17</td>
+      <td>2</td>
+      <td>0.12</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Services sans redondance (un seul serveur)</h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>service_id</th>
+      <th>nom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S05</td>
+      <td>Data Catalog</td>
+    </tr>
+    <tr>
+      <td>S08</td>
+      <td>Archivage</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Utilisation des licences par produit</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>produit</th>
+      <th>capacite</th>
+      <th>affectees</th>
+      <th>actifs</th>
+      <th>taux_utilisation</th>
+      <th>licences_inutilisees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Catalogue de données</td>
+      <td>370</td>
+      <td>330</td>
+      <td>177</td>
+      <td>0.54</td>
+      <td>153</td>
+    </tr>
+    <tr>
+      <td>Outil ETL</td>
+      <td>280</td>
+      <td>248</td>
+      <td>109</td>
+      <td>0.44</td>
+      <td>139</td>
+    </tr>
+    <tr>
+      <td>Suite BI</td>
+      <td>230</td>
+      <td>199</td>
+      <td>148</td>
+      <td>0.74</td>
+      <td>51</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

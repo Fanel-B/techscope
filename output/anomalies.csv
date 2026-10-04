@@ -1,0 +1,13 @@
+﻿source,ligne,regle,detail,gravite
+inventaire.json,inventaire ligne 14,champ obligatoire,server_id manquant,erreur
+inventaire.json,SRV005,unicité,server_id en doublon,erreur
+inventaire.json,SRV900,intégrité référentielle,service_id 'S99' absent de référentiel services,erreur
+inventaire.json,SRV009,fraîcheur,dernière mise à jour il y a 75 jours (> 30),avertissement
+inventaire.json,SRV010,fraîcheur,dernière mise à jour il y a 75 jours (> 30),avertissement
+referentiel.db (usages),S99/M2,intégrité référentielle,service_id 'S99' absent de référentiel services,erreur
+referentiel.db (usages),S01/M4,valeur invalide,volume_activite négatif,erreur
+licences.csv,Suite BI/M2,valeur invalide,capacite négatif,erreur
+licences.csv,Outil ETL/M3,cohérence,affectees > capacite,erreur
+licences.csv,Suite BI/M6,cohérence,actifs > affectees,erreur
+historique.csv,S02/2026-08,champ obligatoire,utilisateurs_actifs manquant,erreur
+historique.csv,S98/2026-09,intégrité référentielle,service_id 'S98' absent de référentiel services,erreur

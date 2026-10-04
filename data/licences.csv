@@ -1,0 +1,19 @@
+produit,metier_id,capacite,affectees,actifs
+Outil ETL,M1,30,25,20
+Outil ETL,M2,80,67,36
+Outil ETL,M3,100,115,63
+Outil ETL,M4,100,94,28
+Outil ETL,M5,20,17,2
+Outil ETL,M6,50,45,23
+Suite BI,M1,50,38,22
+Suite BI,M2,-10,49,38
+Suite BI,M3,100,96,83
+Suite BI,M4,50,46,28
+Suite BI,M5,30,19,15
+Suite BI,M6,100,98,103
+Catalogue de données,M1,20,16,9
+Catalogue de données,M2,20,19,16
+Catalogue de données,M3,50,34,15
+Catalogue de données,M4,100,97,34
+Catalogue de données,M5,80,74,69
+Catalogue de données,M6,100,90,34

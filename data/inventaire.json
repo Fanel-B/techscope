@@ -1,0 +1,121 @@
+[
+  {
+    "server_id": "SRV001",
+    "environnement": "prod",
+    "etat": "actif",
+    "service_id": "S01",
+    "derniere_maj": "2026-09-27"
+  },
+  {
+    "server_id": "SRV002",
+    "environnement": "prod",
+    "etat": "actif",
+    "service_id": "S01",
+    "derniere_maj": "2026-10-01"
+  },
+  {
+    "server_id": "SRV003",
+    "environnement": "dev",
+    "etat": "actif",
+    "service_id": "S02",
+    "derniere_maj": "2026-10-04"
+  },
+  {
+    "server_id": "SRV004",
+    "environnement": "prod",
+    "etat": "actif",
+    "service_id": "S02",
+    "derniere_maj": "2026-09-27"
+  },
+  {
+    "server_id": "SRV005",
+    "environnement": "prod",
+    "etat": "maintenance",
+    "service_id": "S03",
+    "derniere_maj": "2026-09-27"
+  },
+  {
+    "server_id": "SRV006",
+    "environnement": "dev",
+    "etat": "actif",
+    "service_id": "S03",
+    "derniere_maj": "2026-10-04"
+  },
+  {
+    "server_id": "SRV007",
+    "environnement": "dev",
+    "etat": "actif",
+    "service_id": "S04",
+    "derniere_maj": "2026-09-26"
+  },
+  {
+    "server_id": "SRV008",
+    "environnement": "prod",
+    "etat": "actif",
+    "service_id": "S04",
+    "derniere_maj": "2026-09-24"
+  },
+  {
+    "server_id": "SRV009",
+    "environnement": "prod",
+    "etat": "actif",
+    "service_id": "S05",
+    "derniere_maj": "2026-07-21"
+  },
+  {
+    "server_id": "SRV010",
+    "environnement": "preprod",
+    "etat": "actif",
+    "service_id": "S06",
+    "derniere_maj": "2026-07-21"
+  },
+  {
+    "server_id": "SRV011",
+    "environnement": "preprod",
+    "etat": "actif",
+    "service_id": "S06",
+    "derniere_maj": "2026-09-20"
+  },
+  {
+    "server_id": "SRV012",
+    "environnement": "dev",
+    "etat": "actif",
+    "service_id": "S07",
+    "derniere_maj": "2026-09-17"
+  },
+  {
+    "server_id": "SRV013",
+    "environnement": "preprod",
+    "etat": "actif",
+    "service_id": "S07",
+    "derniere_maj": "2026-09-16"
+  },
+  {
+    "server_id": "SRV014",
+    "environnement": "prod",
+    "etat": "actif",
+    "service_id": "S08",
+    "derniere_maj": "2026-10-03"
+  },
+  {
+    "server_id": null,
+    "environnement": "dev",
+    "etat": "actif",
+    "service_id": "S02",
+    "derniere_maj": "2026-10-04"
+  },
+  {
+    "server_id": "SRV005",
+    "environnement": "prod",
+    "etat": "maintenance",
+    "service_id": "S03",
+    "derniere_maj": "2026-09-27"
+  },
+  {
+    "server_id": "SRV900",
+    "environnement": "dev",
+    "etat": "actif",
+    "service_id": "S99",
+    "derniere_maj": "2026-10-04"
+  }
+]
