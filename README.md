@@ -2,7 +2,7 @@
 
 Mini-projet de pilotage d'un parc IT. Je pars de plusieurs sources de formats différents, je contrôle la qualité des données, puis je produis des indicateurs prêts à être mis dans un tableau de bord (Power BI).
 
-**Les données sont entièrement fictives**, générées par `generate_data.py`. Les anomalies y sont mises volontairement pour tester les contrôles.
+**Les données sont entièrement fictives**, générées par `generate_data.py`. Les anomalies y sont mises volontairement pour tester les contrôles. Les dates de dernière mise à jour des serveurs sont calculées par rapport au jour où `generate_data.py` est lancé : le contrôle de fraîcheur donne donc le même résultat quelle que soit la date d'exécution.
 
 ## Pourquoi ce projet
 
@@ -56,7 +56,19 @@ Avec les données fictives actuelles (graine fixée à 42), le pipeline lit 113 
 
 Les fichiers de `output/` sont faits pour être importés dans Power BI. La page 1 est une vue de pilotage (utilisation par produit, services sans redondance, évolution mensuelle). La page 2 détaille par métier et liste les anomalies.
 
-> Le fichier `.pbix` et les captures sont à ajouter dans `docs/` (ils ne sont pas encore faits).
+Le fichier source du rapport est dans `docs/techscope.pbix`.
+
+### Page 1 - pilotage
+
+![Page 1 du dashboard](docs/page1.png)
+
+Vue d'ensemble : les indicateurs clés en haut (lignes écartées, licences inutilisées, taux d'utilisation global, services sans redondance, anomalies), le taux d'utilisation par produit, l'évolution mensuelle des utilisateurs actifs et la liste des services avec leur risque de défaillance unique.
+
+### Page 2 - détail
+
+![Page 2 du dashboard](docs/page2.png)
+
+Analyse détaillée : le croisement produit x métier du taux d'utilisation (en couleur, pour repérer les cas faibles comme l'outil ETL pour la Conformité à 11,76 %), et le tableau des anomalies détectées par les contrôles, filtrable par gravité.
 
 ## Structure
 
@@ -83,4 +95,4 @@ python test_pipeline.py
 - Données fictives : les chiffres ne représentent aucun vrai parc.
 - Le seuil de faible usage (30 %) est arbitraire, il se règle dans `run_pipeline.py`.
 - Pas encore de planification automatique : à brancher sur un cron ou le planificateur Windows.
-- Prochaine étape : le dashboard Power BI.
+- Prochaine étape : planifier l'exécution automatique du pipeline.
