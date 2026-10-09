@@ -2,7 +2,7 @@
 
 Mini-projet de pilotage d'un parc IT. Je pars de plusieurs sources de formats différents, je contrôle la qualité des données, puis je produis des indicateurs prêts à être mis dans un tableau de bord (Power BI).
 
-**Les données sont entièrement fictives**, générées par `generate_data.py`. Les anomalies y sont mises volontairement pour tester les contrôles. Les dates de dernière mise à jour des serveurs sont calculées par rapport au jour où `generate_data.py` est lancé : le contrôle de fraîcheur donne donc le même résultat quelle que soit la date d'exécution.
+**Les données sont entièrement fictives**, générées par `generate_data.py`. Les anomalies y sont mises volontairement pour tester les contrôles. Les dates de dernière mise à jour des serveurs sont calculées par rapport au jour où `generate_data.py` est lancé : le contrôle de fraîcheur donne donc le même résultat à condition de relancer `generate_data.py` avant `run_pipeline.py`.
 
 ## Pourquoi ce projet
 
