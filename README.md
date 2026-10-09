@@ -6,7 +6,7 @@ Mini-projet de pilotage d'un parc IT. Je pars de plusieurs sources de formats di
 
 ## Pourquoi ce projet
 
-Je voulais comprendre le parcours complet d'une donnée : récupérer des sources hétérogènes, vérifier qu'elles sont fiables, calculer des indicateurs, et automatiser le tout. Le contexte (un parc de serveurs, de services et de licences) est inspiré de ce qu'on peut rencontrer dans un service de pilotage informatique.
+Je cherchais un projet en lien avec la gestion d'un système d'information, comme on peut en trouver dans la DSI d'une grande entreprise ou d'une banque. Je voulais suivre tout le chemin d'une donnée : des fichiers de formats différents au départ, des contrôles pour savoir si on peut s'y fier, puis un tableau de bord. Le contexte (serveurs, services, licences) est inventé, mais l'idée est celle d'un vrai suivi de parc.
 
 ## Ce que fait le pipeline
 
@@ -70,6 +70,15 @@ Vue d'ensemble : les indicateurs clés en haut (lignes écartées, licences inut
 
 Analyse détaillée : le croisement produit x métier du taux d'utilisation (en couleur, pour repérer les cas faibles comme l'outil ETL pour la Conformité à 11,76 %), et le tableau des anomalies détectées par les contrôles, filtrable par gravité.
 
+## Ce qui a été compliqué
+
+C'était la première fois que j'utilisais Power BI. C'est la partie qui m'a pris le plus de temps, bien plus que le Python.
+
+- **Savoir quelles données charger.** Plusieurs fichiers de `output/` se recoupaient. Il a fallu choisir lesquels garder pour ne pas obtenir deux chiffres différents pour la même chose.
+- **Power Query.** Mes décimales avec un point (`122.0`) étaient lues comme du texte, donc ma courbe comptait les lignes au lieu de les additionner. Trois tables avaient aussi leur première ligne prise pour des données. J'ai dû apprendre à corriger les types et les paramètres régionaux.
+- **Les mesures DAX.** La syntaxe m'a bloqué au début. J'ai aussi compris qu'un taux global doit se calculer avec une mesure et non avec une moyenne de pourcentages.
+- **La matrice.** Les cases vides étaient colorées en rouge, comme un taux très bas, alors que ce sont des lignes écartées par mes contrôles. J'ai dû changer la mise en forme pour que ça ne prête pas à confusion.
+
 ## Structure
 
 ```
@@ -96,3 +105,5 @@ python test_pipeline.py
 - Le seuil de faible usage (30 %) est arbitraire, il se règle dans `run_pipeline.py`.
 - Pas encore de planification automatique : à brancher sur un cron ou le planificateur Windows.
 - Prochaine étape : planifier l'exécution automatique du pipeline.
+- La page 1 du dashboard a un tableau un peu coupé en bas, et les en-têtes de la matrice sont trop gros. Je les retoucherai.
+- Le pipeline se lance à la main. Je voudrais le planifier pour qu'il tourne tout seul.
