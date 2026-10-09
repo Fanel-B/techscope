@@ -103,7 +103,5 @@ python test_pipeline.py
 
 - Données fictives : les chiffres ne représentent aucun vrai parc.
 - Le seuil de faible usage (30 %) est arbitraire, il se règle dans `run_pipeline.py`.
-- Pas encore de planification automatique : à brancher sur un cron ou le planificateur Windows.
-- Prochaine étape : planifier l'exécution automatique du pipeline.
 - La page 1 du dashboard a un tableau un peu coupé en bas, et les en-têtes de la matrice sont trop gros. Je les retoucherai.
 - Le pipeline se lance à la main. Je voudrais le planifier pour qu'il tourne tout seul.
