@@ -99,6 +99,13 @@ python run_pipeline.py
 python test_pipeline.py
 ```
 
+`data/` et `output/` sont versionnés dans le dépôt : ce qu'on y lit est un
+instantané figé au 4 octobre 2026, gardé pour qu'on puisse parcourir les
+résultats et le dashboard sans rien exécuter. Ce ne sont pas les vôtres.
+Les deux premières commandes ci-dessus les régénèrent et les écrasent — il faut
+lancer `generate_data.py` **puis** `run_pipeline.py`, dans cet ordre, pour
+obtenir vos propres sorties.
+
 ## Limites et suite
 
 - Données fictives : les chiffres ne représentent aucun vrai parc.
